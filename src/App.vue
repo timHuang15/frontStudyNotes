@@ -1,13 +1,45 @@
 <template>
   <div id="app">
+    <TopNav :nav="nav" />
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
-
+<script>
+import TopNav from '@/components/topNav.vue'
+export default {
+  components: {
+    TopNav
+  },
+  data() {
+    return {
+      nav: []
+    }
+  },
+  created() {
+    this.createNav()
+  },
+  mounted() {},
+  methods: {
+    createNav() {
+      const me = this
+      const tempNav = [
+        { id: '1', label: 'Css', path: '' },
+        {
+          id: '2',
+          label: 'Es',
+          path: '',
+          children: [{ id: '2-1', label: 'setTime', path: '' }]
+        }
+      ]
+      me.nav = tempNav
+    }
+  }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
