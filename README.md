@@ -1,3 +1,6 @@
+# front-Study-Notes
+学习Vue与es6
+
 # front-study-note
 
 ## Project setup
@@ -22,3 +25,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
