@@ -1,15 +1,11 @@
 <template>
   <div id="app">
-    <TopNav :nav="nav" />
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <TopNav :nav="nav" :changeRouter="changeRouter" />
     <router-view />
   </div>
 </template>
 <script>
-import TopNav from '@/components/topNav.vue'
+import TopNav from '@/components/publicComents/topNav/topNav.vue'
 export default {
   components: {
     TopNav
@@ -27,15 +23,19 @@ export default {
     createNav() {
       const me = this
       const tempNav = [
-        { id: '1', label: 'Css', path: '' },
+        { id: '1', label: 'Css', path: '/css' },
         {
           id: '2',
           label: 'Es',
           path: '',
-          children: [{ id: '2-1', label: 'setTime', path: '' }]
+          children: [{ id: '2-1', label: 'setTime', path: '/esTest' }]
         }
       ]
       me.nav = tempNav
+    },
+    changeRouter(nav) {
+      console.log(nav)
+      this.$router.push(nav.path)
     }
   }
 }
