@@ -27,9 +27,12 @@
 
 <script>
 import shape from '../../cssStudy/shape'
+import grailLayout from '../../cssStudy/grailLayout'
 import threesomeWingLayout from '../../cssStudy/threesomeWingLayout'
 import flexLayout from '../../cssStudy/flexLayout'
 import position from '../../cssStudy/position'
+import horizontalAlignment from '../../cssStudy/horizontalAlignment'
+import verticalAlignment from '../../cssStudy/verticalAlignment'
 
 export default {
   watch: {
@@ -68,14 +71,32 @@ export default {
         },
         {
           id: 3,
+          label: '圣杯布局',
+          comp: grailLayout,
+          children: []
+        },
+        {
+          id: 4,
           label: 'flex布局',
           comp: flexLayout,
           children: []
         },
         {
-          id: 4,
+          id: 5,
           label: '定位',
           comp: position,
+          children: []
+        },
+        {
+          id: 6,
+          label: '水平对齐',
+          comp: horizontalAlignment,
+          children: []
+        },
+        {
+          id: 7,
+          label: '垂直对齐',
+          comp: verticalAlignment,
           children: []
         }
       ],
