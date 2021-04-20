@@ -33,6 +33,7 @@ import flexLayout from '../../cssStudy/flexLayout'
 import position from '../../cssStudy/position'
 import horizontalAlignment from '../../cssStudy/horizontalAlignment'
 import verticalAlignment from '../../cssStudy/verticalAlignment'
+import marginNegative from '../../cssStudy/marginNegative'
 
 export default {
   watch: {
@@ -97,6 +98,12 @@ export default {
           id: 7,
           label: '垂直对齐',
           comp: verticalAlignment,
+          children: []
+        },
+        {
+          id: 8,
+          label: 'margin负值问题',
+          comp: marginNegative,
           children: []
         }
       ],
